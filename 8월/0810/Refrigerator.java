@@ -1,4 +1,3 @@
-package com.ssafy;
 
 public class Refrigerator extends Product {
 	private String volume;

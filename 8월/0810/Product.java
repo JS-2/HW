@@ -1,4 +1,3 @@
-package com.ssafy;
 
 public class Product {
 	private int number;

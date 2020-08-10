@@ -1,4 +1,3 @@
-package com.ssafy;
 
 public class TV extends Product {
 	private int size;
