@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.StringTokenizer;
  
-class Solution
+class HW3
 {
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

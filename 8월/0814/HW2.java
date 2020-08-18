@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.StringTokenizer;
  
-class Solution
+class HW2
 {
     final static int[][] direction = { { -1, 0 }, { 0, 1 }, { 1, 0 }, { 0, -1 } };
     static boolean[][] matrix;
