@@ -6,7 +6,7 @@ import java.util.StringTokenizer;
 public class HW {
 	
 	static int[][] board = new int[19][19];
-	static boolean[][][] visit = new boolean[19][19][8];
+	static boolean[][][] visit = new boolean[19][19][8]; // 방향도 방문체크 포함
 	final static int[][] direction = {
 			{ -1, 0 }, { -1, 1 }, { 0, 1 }, { 1, 1 }, 
 			{ 1, 0 }, { 1, -1 }, { 0, -1 }, { -1, -1 }
