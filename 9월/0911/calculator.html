@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+.calculator {
+	border: 2px solid;
+	width: 275px;
+	height: 350px;
+	text-align: center;
+}
+.buttons {
+	display: inline-block;
+}
+table input {
+	width: 50px;
+	height: 50px;
+	margin: 5px 5px;
+}
+
+#display {
+	border: 2px solid;
+	margin: 10px auto;
+	width: 90%;
+	height: 10%;
+}
+</style>
+<script>
+	function btnClick(btnValue) {
+		var display = $("#display").val();
+		$("#display").val(display + btnValue);
+	}
+	
+	function resultBtnClick() {
+		var display = $("#display").val();
+		$("#display").val(eval(display));
+	}
+	
+	function CEBtnClick() {
+		$("#display").val('');
+	}
+</script>
+</head>
+<body>
+	<div class="calculator">
+		<input type="text" id="display">
+		<table class="buttons">
+			<tr>
+				<td><input type="button" onclick="btnClick(7)" value="7"></td>
+				<td><input type="button" onclick="btnClick(8)" value="8"></td>
+				<td><input type="button" onclick="btnClick(9)" value="9"></td>
+				<td><input type="button" onclick="btnClick('+')" value="+"></td>
+			</tr>
+			<tr>
+				<td><input type="button" onclick="btnClick(4)" value="4"></td>
+				<td><input type="button" onclick="btnClick(5)" value="5"></td>
+				<td><input type="button" onclick="btnClick(6)" value="6"></td>
+				<td><input type="button" onclick="btnClick('-')" value="-"></td>
+			</tr>
+			<tr>
+				<td><input type="button" onclick="btnClick(1)" value="1"></td>
+				<td><input type="button" onclick="btnClick(2)" value="2"></td>
+				<td><input type="button" onclick="btnClick(3)" value="3"></td>
+				<td><input type="button" onclick="btnClick('*')" value="*"></td>
+			</tr>
+			<tr>
+				<td><input type="button" onclick="btnClick(0)" value="0"></td>
+				<td><input type="button" onclick="CEBtnClick()" value="CE"></td>
+				<td><input type="button" onclick="resultBtnClick()" value="="></td>
+				<td><input type="button" onclick="btnClick('/')" value="/"></td>
+			</tr>
+			
+		</table>
+	</div>
+</body>
+</html>
