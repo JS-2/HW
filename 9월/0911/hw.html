@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+.lottoArea {
+	margin:200px auto;
+	padding: 50px 0;
+	text-align:center;
+	background-color:skyblue;
+}
+.lottoBall {
+	width:50px;
+	height:50px;
+	display: inline-block;
+	text-align: center;
+	font-size: 2rem;
+	color: white;
+	border-radius:50%;
+	margin:5px;
+	background-color:orange;
+}
+</style>
+</head>
+<body>
+	<div class="lottoArea"></div>
+	<script>
+	var cnt = 0;
+	var lottoNumArr = new Array(6);
+	var interval;
+	var lottoAreaElement = document.getElementsByClassName("lottoArea")[0];
+	
+	function makeLottoNum() {
+		return Math.floor(Math.random() * 44 + 1);
+	}
+	
+	function findUnique(lottoNum) {
+		for(var i = 0; i < cnt; i++) {
+			if(lottoNumArr[i] == lottoNum) return true;
+		}
+		return false;
+	}
+	
+	function writeUniqueLotto() {
+		do {
+			var lottoNum = makeLottoNum();
+		}while(findUnique(lottoNum));
+		
+		lottoNumArr[cnt++] = lottoNum;
+		$(".lottoArea").append("<div class='lottoBall'>" + lottoNum + "</div>");
+		if(cnt == 6)
+			clearInterval(interval);
+	}
+	
+	interval = setInterval("writeUniqueLotto()", 500);
+	</script>
+</body>
+</html>
