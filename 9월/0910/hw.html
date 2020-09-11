@@ -36,11 +36,10 @@
 	}
 	
 	function findUnique(lottoNum) {
-		var flag = false;
 		for(var i = 0; i < cnt; i++) {
-			if(lottoNumArr[i] == lottoNum) flag = true;
+			if(lottoNumArr[i] == lottoNum) return true;
 		}
-		return flag;
+		return false;
 	}
 	
 	function writeUniqueLotto() {
