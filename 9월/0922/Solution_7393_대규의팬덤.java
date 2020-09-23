@@ -1,6 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
-
+//못풀겠어요
 public class Solution_7393_대규의팬덤 {
 	public static final int MOD = 1000000000;
 	public static int[][][] dp;
