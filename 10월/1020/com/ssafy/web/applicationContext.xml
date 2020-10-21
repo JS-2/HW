@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+   <!-- 스프링 프레임워크는 Bean컨테이너!!
+                      ==> 빈(자바클래스)을 관리
+               ※주의: 클래스만 등록(인터페이스X, 추상클래스X)             
+    -->  
+          
+    <bean class="com.ssafy.model.dto.Product" id="product">
+    	<constructor-arg value="A1234"/>
+    	<constructor-arg value="냉냉장장고고"/>
+    	<constructor-arg value="500000" type="int"/>
+    	<constructor-arg value="냉장고"/>
+    </bean>
+    
+    <bean class="com.ssafy.model.repository.ProductRepoImpl" id="repo"></bean>
+    <bean class="com.ssafy.model.service.ProductServiceImpl" id = "service">
+    	<property name="repo" ref="repo"/>
+    </bean>
+    
+</beans>
